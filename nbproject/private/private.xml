@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/index.html</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/css/login.css</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/css/main.css</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/src/java/controller/Authentication.java</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/WEB-INF/web.xml</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/view/authen/login.jsp</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/icon/facebook.svg</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/icon/google.svg</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/src/java/dal/GenericDAO.java</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/src/java/dal/DBContext.java</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/src/java/dal/implement/AccountDAO.java</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/src/java/entity/Account.java</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/view/index.jsp</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/view/common/header.jsp</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/view/common/footer.jsp</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/view/common/mobile_menu.jsp</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/view/accountManagement.jsp</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/view/cart.jsp</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/view/contact.jsp</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/view/intro.jsp</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/view/lienhe.jsp</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/view/listlike.jsp</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/view/newDetail.jsp</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/view/news.jsp</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/view/order_success.jsp</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/view/pay.jsp</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/view/product.jsp</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/view/ProductDetail.jsp</file>
+            <file>file:/D:/!course/FPT/PRJ/Shoes_Store/web/view/authen/registration.jsp</file>
+        </group>
+    </open-files>
+</project-private>
