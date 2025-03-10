@@ -5,25 +5,23 @@
 package dal.implement;
 
 import dal.GenericDAO;
-import entity.Account;
-import java.util.LinkedHashMap;
+import entity.Customer;
 import java.util.List;
 
 /**
  *
  * @author Admin
  */
-public class AccountDAO extends GenericDAO<Account>{
+public class RoleDAO extends GenericDAO<Customer>{
 
     @Override
-    public List<Account> findAll() {
+    public List<Customer> findAll() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public int insert(Account t) {
+    public int insert(Customer t) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
-
 }

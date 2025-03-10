@@ -21,7 +21,7 @@
                     <div class="col-6 login_link">
                         <ul class="header_link right m-auto">
                             <li>
-                                <a href="/Shoes_Store/view/authen/login.jsp"><i class="fas fa-sign-in-alt mr-3"></i>Đăng nhập</a>
+                                <a href="/Shoes_Store/authen?action=login"><i class="fas fa-sign-in-alt mr-3"></i>Đăng nhập</a>
                             </li>
                             <li>
                                 <a href="/Shoes_Store/view/authen/registration.jsp"><i class="fas fa-user-plus mr-3" style="margin-left: 10px;"></i>Đăng kí</a>

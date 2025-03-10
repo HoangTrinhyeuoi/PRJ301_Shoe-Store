@@ -118,7 +118,7 @@
         <div class="login__form">
             <div class="row">
                 <div class="col-sm-12 col-lg-6">
-                    <form action="" method="POST" class="form" id="form-2">
+                    <form action="${pageContext.request.contextPath}/authen?action=login" method="POST" class="form" id="form-2">
                         <h3 class="heading">ĐĂNG NHẬP</h3>
                         <a href="" class="form__forgot-password">Bạn quên mật khẩu?</a>
                         <div class="form-group">

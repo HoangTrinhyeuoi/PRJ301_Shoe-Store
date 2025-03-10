@@ -8,7 +8,7 @@ package entity;
  *
  * @author Admin
  */
-public class Account {
+public class Customer {
        
     int Customers_ID;
     String User_name;
@@ -18,7 +18,7 @@ public class Account {
     String Address;
     String Phone;
 
-    public Account(int Customers_ID, String User_name, String Password, String Email, String Full_name, String Address, String Phone) {
+    public Customer(int Customers_ID, String User_name, String Password, String Email, String Full_name, String Address, String Phone) {
         this.Customers_ID = Customers_ID;
         this.User_name = User_name;
         this.Password = Password;
