@@ -5,6 +5,7 @@
 package Controller;
 
 import DAO.CustomerDAO;
+import Model.Customer;
 import Model.UserGoogleDto;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -34,26 +35,38 @@ public class GoogleLogin extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-         System.out.println("Servlet processRequest() đã được gọi!");
-        String code = request.getParameter("code");
-        String accessToken = getToken(code);
-        UserGoogleDto user = getUserInfo(accessToken);
-        System.out.println(user);
-         // Kiểm tra và lưu thông tin người dùng vào database
-        CustomerDAO userDao = new CustomerDAO();
-        if (!userDao.isUserExists(user.getEmail())) {
-            userDao.saveUser(user);
-        }
-        
-        
-        // Lưu thông tin người dùng vào session
-        HttpSession session = request.getSession();
-        session.setAttribute("user", user);
-
-        // Chuyển hướng đến trang products.jsp
-        request.getRequestDispatcher("/JSP/index.jsp").forward(request, response);
+        throws ServletException, IOException {
+    System.out.println("Servlet processRequest() đã được gọi!");
+    String code = request.getParameter("code");
+    String accessToken = getToken(code);
+    UserGoogleDto user = getUserInfo(accessToken);
+    System.out.println(user);
+    
+    // Kiểm tra và lưu thông tin người dùng vào database
+    CustomerDAO userDao = new CustomerDAO();
+    if (!userDao.isUserExists(user.getEmail())) {
+        userDao.saveUser(user);
     }
+    
+    // Kiểm tra xem người dùng đã có thông tin đầy đủ chưa
+    if (!userDao.hasCompleteInfo(user.getEmail())) {
+        // Chuyển hướng đến trang bổ sung thông tin
+        request.setAttribute("email", user.getEmail());
+        request.setAttribute("name", user.getName());
+        request.getRequestDispatcher("/JSP/additionalInfo.jsp").forward(request, response);
+        return;
+    }
+    
+    // Lấy thông tin đầy đủ của người dùng
+    Customer customer = userDao.getCustomerByEmail(user.getEmail());
+    
+    // Lưu thông tin người dùng vào session
+    HttpSession session = request.getSession();
+    session.setAttribute("customer", customer);
+    
+    // Chuyển hướng đến trang index.jsp
+    response.sendRedirect(request.getContextPath() + "/JSP/index.jsp");
+}
     
     public static String getToken(String code) throws ClientProtocolException, IOException {
 		// call api to get token
