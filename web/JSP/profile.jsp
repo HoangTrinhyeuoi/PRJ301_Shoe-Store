@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <%@page import="DAO.CustomerDAO"%>
+=======
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="Model.Customer" %>
 <%@ page import="Model.UserGoogleDto" %>
@@ -140,6 +143,7 @@
                 userName = googleUser.getName();
                 fullName = googleUser.getName();
                 email = googleUser.getEmail();
+<<<<<<< HEAD
                 CustomerDAO dao = new CustomerDAO();
                 Customer googleCustomer = dao.getCustomerByEmail(email); // Thêm phương thức này
 
@@ -147,6 +151,9 @@
                     address = googleCustomer.getAddress();
                     phone = googleCustomer.getPhoneNumber();
                 }
+=======
+                // Các trường khác có thể không có sẵn từ Google
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
             }
             
             // Lấy chữ cái đầu tiên của username cho avatar
@@ -207,7 +214,11 @@
                     </a>
                     
                     <div>
+<<<<<<< HEAD
                         <% if (customer != null || googleUser != null) { %>
+=======
+                        <% if (customer != null) { // Chỉ hiển thị nút chỉnh sửa cho người dùng thông thường, không phải người dùng Google %>
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
                             <a href="${pageContext.request.contextPath}/JSP/editProfile.jsp" class="btn btn-edit me-2">
                                 <i class="fas fa-user-edit me-2"></i>Chỉnh sửa hồ sơ
                             </a>

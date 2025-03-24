@@ -45,7 +45,11 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto me-auto">
                     <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/JSP/products.jsp">Sản Phẩm</a></li>
+<<<<<<< HEAD
                     <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/JSP/cart.jsp">Giỏ hàng</a></li>
+=======
+                    <li class="nav-item"><a class="nav-link" href="cart.jsp">Giỏ hàng</a></li>
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
                 </ul>
                 <!-- Thanh tìm kiếm -->
                 <form class="d-flex" action="${pageContext.request.contextPath}/JSP/products.jsp" method="GET">
@@ -69,8 +73,13 @@
                                 <%= (user != null) ? user.getUserName() : (googleUser != null) ? googleUser.getName() : "" %>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+<<<<<<< HEAD
                                 <li><a class="dropdown-item" href="${pageContext.request.contextPath}/JSP/profile.jsp">Hồ sơ</a></li>
                                 <li><a class="dropdown-item" href="${pageContext.request.contextPath}/JSP/logout.jsp">Đăng xuất</a></li>
+=======
+                                <li><a class="dropdown-item" href="profile.jsp">Hồ sơ</a></li>
+                                <li><a class="dropdown-item" href="logout.jsp">Đăng xuất</a></li>
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
                             </ul>
                         </li>
                     <% } else { %>
@@ -105,7 +114,11 @@
             <!-- Sản phẩm mẫu -->
             <div class="col-md-4">
                 <div class="card">
+<<<<<<< HEAD
                     <img src="../img/OIP (2).jpeg" class="card-img-top" alt="Giày 1">
+=======
+                    <img src="img/OIP (2).jpeg" class="card-img-top" alt="Giày 1">
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
                     <div class="card-body text-center">
                         <h5 class="card-title">Nike Air Max</h5>
                         <p class="card-text">2,500,000 VND</p>
@@ -115,7 +128,11 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
+<<<<<<< HEAD
                     <img src="../img/OIP (1).jpeg" class="card-img-top" alt="Giày 2">
+=======
+                    <img src="img/OIP (1).jpeg" class="card-img-top" alt="Giày 2">
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
                     <div class="card-body text-center">
                         <h5 class="card-title">Adidas Ultraboost</h5>
                         <p class="card-text">3,000,000 VND</p>
@@ -125,7 +142,11 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
+<<<<<<< HEAD
                     <img src="../img/OIP.jpeg" class="card-img-top" alt="Giày 3">
+=======
+                    <img src="img/OIP.jpeg" class="card-img-top" alt="Giày 3">
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
                     <div class="card-body text-center">
                         <h5 class="card-title">Puma RS-X</h5>
                         <p class="card-text">2,200,000 VND</p>

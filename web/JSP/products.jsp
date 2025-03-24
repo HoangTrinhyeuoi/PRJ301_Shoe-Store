@@ -1,8 +1,11 @@
 <%@page import="java.util.List"%>
 <%@page import="DAO.ProductDAO"%>
 <%@page import="Model.Product"%>
+<<<<<<< HEAD
 <%@page import="DAO.CartDAO"%>
 <%@page import="Model.Customer"%>
+=======
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="vi">
@@ -13,7 +16,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+<<<<<<< HEAD
         /* CSS giữ nguyên */
+=======
+        /* Các style cũ giữ nguyên */
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
         body {
             background-color: #f8f9fa;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -133,6 +140,15 @@
         .badge-sale {
             background-color: #dc3545;
         }
+<<<<<<< HEAD
+=======
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
         
         /* Sidebar styles */
         .sidebar {
@@ -186,6 +202,7 @@
             margin-right: 10px;
             color: #6a11cb;
         }
+<<<<<<< HEAD
         
         /* CSS cho toast thông báo */
         .toast-container {
@@ -259,10 +276,95 @@
             color: white;
             padding: 2rem 0;
             margin-top: 3rem;
+=======
+        .price-filter {
+            margin-bottom: 2rem;
+        }
+        .price-slider {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        .price-label {
+            display: flex;
+            justify-content: space-between;
+            color: #6c757d;
+            font-size: 0.875rem;
+        }
+        .filter-badge {
+            display: inline-block;
+            background-color: #f8f9fa;
+            color: #495057;
+            border-radius: 20px;
+            padding: 0.3rem 0.8rem;
+            margin: 0.25rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.875rem;
+        }
+        .filter-badge:hover {
+            background-color: #e2e6ea;
+        }
+        .filter-badge.active {
+            background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+            color: white;
+        }
+        .discount-toggle {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+            margin-right: 10px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        .rating-stars {
+            color: #ffc107;
+            cursor: pointer;
+        }
+        .rating-stars i {
+            margin-right: 2px;
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
         }
     </style>
 </head>
 <body>
+<<<<<<< HEAD
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg main-navbar">
         <div class="container">
@@ -362,6 +464,8 @@
         </div>
     </nav>
 
+=======
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
     <header class="page-header">
         <div class="container">
             <h1 class="text-center mb-0"><i class="fas fa-store me-2"></i>Danh Sách Sản Phẩm</h1>
@@ -376,6 +480,7 @@
                     <h4><i class="fas fa-filter me-2"></i>Bộ lọc</h4>
                     
                     <!-- Categories -->
+<<<<<<< HEAD
                     <div class="mb-4">
                         <h5 class="fw-bold mb-3">Danh mục</h5>
                         <ul class="category-list">
@@ -421,6 +526,58 @@
                             </li>
                         </ul>
                     </div>
+=======
+<!-- Categories -->
+<!-- Categories -->
+<div class="mb-4">
+    <h5 class="fw-bold mb-3">Danh mục</h5>
+    <ul class="category-list">
+        <li><a href="${pageContext.request.contextPath}/JSP/products.jsp?category=all"><i class="fas fa-th-large"></i>Tất cả sản phẩm</a></li>
+        
+        <!-- Sneaker Category -->
+        <li>
+            <details>
+                <summary><i class="fas fa-shoe-prints"></i>Sneaker</summary>
+                <ul class="category-list" style="margin-left: 20px; margin-top: 10px;">
+                    <li><a href="${pageContext.request.contextPath}/JSP/products.jsp?category=1&brand=adidas"><i class="fas fa-angle-right"></i>Adidas</a></li>
+                    <li><a href="${pageContext.request.contextPath}/JSP/products.jsp?category=1&brand=nike"><i class="fas fa-angle-right"></i>Nike</a></li>
+                    <li><a href="${pageContext.request.contextPath}/JSP/products.jsp?category=1&brand=puma"><i class="fas fa-angle-right"></i>Puma</a></li>
+                    <li><a href="${pageContext.request.contextPath}/JSP/products.jsp?category=1"><i class="fas fa-angle-right"></i>Tất cả Sneaker</a></li>
+                </ul>
+            </details>
+        </li>
+        
+        <!-- Football Category -->
+        <li>
+            <details>
+                <summary><i class="fas fa-futbol"></i>Football</summary>
+                <ul class="category-list" style="margin-left: 20px; margin-top: 10px;">
+                    <li><a href="${pageContext.request.contextPath}/JSP/products.jsp?category=2&brand=adidas"><i class="fas fa-angle-right"></i>Adidas</a></li>
+                    <li><a href="${pageContext.request.contextPath}/JSP/products.jsp?category=2&brand=nike"><i class="fas fa-angle-right"></i>Nike</a></li>
+                    <li><a href="${pageContext.request.contextPath}/JSP/products.jsp?category=2&brand=puma"><i class="fas fa-angle-right"></i>Puma</a></li>
+                    <li><a href="${pageContext.request.contextPath}/JSP/products.jsp?category=2"><i class="fas fa-angle-right"></i>Tất cả Football</a></li>
+                </ul>
+            </details>
+        </li>
+        
+        <!-- Running Category -->
+        <li>
+            <details>
+                <summary><i class="fas fa-running"></i>Running</summary>
+                <ul class="category-list" style="margin-left: 20px; margin-top: 10px;">
+                    <li><a href="${pageContext.request.contextPath}/JSP/products.jsp?category=3&brand=adidas"><i class="fas fa-angle-right"></i>Adidas</a></li>
+                    <li><a href="${pageContext.request.contextPath}/JSP/products.jsp?category=3&brand=nike"><i class="fas fa-angle-right"></i>Nike</a></li>
+                    <li><a href="${pageContext.request.contextPath}/JSP/products.jsp?category=3&brand=puma"><i class="fas fa-angle-right"></i>Puma</a></li>
+                    <li><a href="${pageContext.request.contextPath}/JSP/products.jsp?category=3"><i class="fas fa-angle-right"></i>Tất cả Running</a></li>
+                </ul>
+            </details>
+        </li>
+    </ul>
+</div>
+                    
+                  
+               
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
                 </div>
             </div>
 
@@ -470,6 +627,10 @@
                         products = productDAO.searchProducts("");
                     }
                 %>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
                 <% if (products != null && !products.isEmpty()) { %>
                     <div class="result-count">
                         <i class="fas fa-info-circle me-2"></i>
@@ -491,12 +652,17 @@
                                     <% } %>
                                     
                                     <div class="card-img-container">
+<<<<<<< HEAD
                                         <img src="../img/<%= p.getImageUrl() %>" class="card-img-top" alt="<%= p.getName() %>">
+=======
+                                        <img src="<%= p.getImageUrl() %>" class="card-img-top" alt="<%= p.getName() %>">
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
                                     </div>
                                     <div class="card-body d-flex flex-column">
                                         <h5 class="card-title" title="<%= p.getName() %>"><%= p.getName() %></h5>
                                         <p class="card-text flex-grow-1"><%= p.getDescription() %></p>
                                         <div class="price text-danger">
+<<<<<<< HEAD
                                             <i class="fas fa-tag me-2"></i><%= String.format("%,.0f", p.getPrice()) %> VND
                                             <% if (p.getId() % 7 == 0) { %>
                                                 <small class="text-decoration-line-through text-muted ms-2">
@@ -521,6 +687,18 @@
                                                 </button>
                                             <% } %>
                                         </div>
+=======
+                                            <i class="fas fa-tag me-2"></i><%= p.getPrice() %> VND
+                                            <% if (p.getId() % 7 == 0) { %>
+                                                <small class="text-decoration-line-through text-muted ms-2">
+                                                    <%= (int)(p.getPrice() * 1.2) %> VND
+                                                </small>
+                                            <% } %>
+                                        </div>
+                                        <a href="${pageContext.request.contextPath}/JSP/productDetail.jsp?id=<%= p.getId() %>" class="btn btn-detail text-white">
+                                            <i class="fas fa-eye me-2"></i>Xem chi tiết
+                                        </a>
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
                                     </div>
                                 </div>
                             </div>
@@ -538,6 +716,7 @@
         </div>
     </div>
 
+<<<<<<< HEAD
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -620,3 +799,40 @@
         } else {
             toastElement.classList.add('toast-error');
         }
+=======
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2025 Cửa hàng trực tuyến. Tất cả các quyền được bảo lưu.</p>
+            <div>
+                <i class="fab fa-facebook mx-2"></i>
+                <i class="fab fa-instagram mx-2"></i>
+                <i class="fab fa-twitter mx-2"></i>
+                <i class="fab fa-youtube mx-2"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Price range slider
+        const priceRange = document.getElementById('priceRange');
+        const selectedPrice = document.getElementById('selectedPrice');
+        
+        priceRange.addEventListener('input', function() {
+            const value = this.value;
+            const formattedValue = parseInt(value).toLocaleString('vi-VN');
+            selectedPrice.textContent = `0 VND - ${formattedValue} VND`;
+        });
+        
+        // Filter badges
+        const filterBadges = document.querySelectorAll('.filter-badge');
+        filterBadges.forEach(badge => {
+            badge.addEventListener('click', function() {
+                filterBadges.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41

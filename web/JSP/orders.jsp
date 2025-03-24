@@ -128,7 +128,11 @@
                     <a href="${pageContext.request.contextPath}/index.html" class="btn btn-outline-light">
                         <i class="fas fa-home me-2"></i>Trang chủ
                     </a>
+<<<<<<< HEAD
                     <a href="${pageContext.request.contextPath}/products" class="btn btn-light ms-2">
+=======
+                    <a href="${pageContext.request.contextPath}/JSP/products.jsp" class="btn btn-light ms-2">
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
                         <i class="fas fa-shopping-cart me-2"></i>Tiếp tục mua sắm
                     </a>
                 </div>

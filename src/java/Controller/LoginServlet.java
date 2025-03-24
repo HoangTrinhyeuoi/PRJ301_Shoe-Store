@@ -3,6 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 package Controller;
+<<<<<<< HEAD
+=======
+
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
 import DAO.CustomerDAO;
 import Model.Customer;
 import java.io.IOException;
@@ -11,17 +15,28 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+<<<<<<< HEAD
+=======
+
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
 /**
  *
  * @author ASUS
  */
 public class LoginServlet extends HttpServlet {
+<<<<<<< HEAD
     private CustomerDAO customerDAO;
     
+=======
+
+    private CustomerDAO customerDAO;
+
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
     @Override
     public void init() {
         customerDAO = new CustomerDAO();
     }
+<<<<<<< HEAD
     
     // Thêm phương thức doGet để xử lý GET request
     @Override
@@ -67,3 +82,22 @@ public class LoginServlet extends HttpServlet {
         }
     }
 }
+=======
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+
+        Customer customer = customerDAO.login(email, password);
+
+        if (customer != null) {
+            HttpSession session = request.getSession();
+            session.setAttribute("customer", customer);
+            request.getRequestDispatcher("/JSP/index.jsp").forward(request, response); // Chuyển hướng sau khi đăng nhập thành công
+        } else {
+            request.setAttribute("errorMessage", "Sai tài khoản hoặc mật khẩu!");
+            request.getRequestDispatcher("/JSP/login.jsp").forward(request, response);
+        }
+    }
+}
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41

@@ -56,6 +56,7 @@ public class CustomerDAO {
         return null;
         }
         
+<<<<<<< HEAD
       public Customer getCustomerByEmail(String email) {
     String sql = "SELECT * FROM Customers WHERE Email = ?";
     try (Connection conn = DBconnection.getConnection();
@@ -81,6 +82,9 @@ public class CustomerDAO {
     return null;
 }
     // Phương thức để lưu thông tin người dùng vào database
+=======
+        // Phương thức để lưu thông tin người dùng vào database
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
     public void saveUser(UserGoogleDto user) {
         String query = "INSERT INTO Customers (User_name, Password, Email, Full_name, Address, Phone_number) VALUES (?, ?, ?, ?, ?, ?)";
         try (Connection conn = DBconnection.getConnection();
@@ -126,6 +130,7 @@ public class CustomerDAO {
         }
         return false;
     }
+<<<<<<< HEAD
     
     public void updateCustomer(Customer customer) {
         String sql = "UPDATE Customers SET Full_name = ?, Address = ?, Phone_number = ? WHERE Email = ?";
@@ -177,4 +182,6 @@ public class CustomerDAO {
     }
     
 
+=======
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
 }

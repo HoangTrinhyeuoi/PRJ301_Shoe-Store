@@ -10,9 +10,12 @@
 <project name="Group_Assignment" default="default" basedir=".">
     <description>Builds, tests, and runs the project Group_Assignment.</description>
     <import file="nbproject/build-impl.xml"/>
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
     <!--
 
     There exist several targets which are by default empty and which can be 

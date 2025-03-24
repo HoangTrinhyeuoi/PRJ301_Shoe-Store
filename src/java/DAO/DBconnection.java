@@ -20,9 +20,15 @@ private static Connection connection = null;
         Connection conn = null;
             try {
                 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+<<<<<<< HEAD
                 String url = "jdbc:sqlserver://PJM-PC\\MINH:1433;databaseName=ShoeStore;encrypt=true;trustServerCertificate=true;";
                 String username = "sa"; // Thay bằng username của bạn
                 String password = "1234"; // Thay bằng password của bạn
+=======
+                String url = "jdbc:sqlserver://HOANGTRINH05;databaseName=ShoeStore;encrypt=true;trustServerCertificate=true;";
+                String username = "Hoang24"; // Thay bằng username của bạn
+                String password = "123"; // Thay bằng password của bạn
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
                 connection = DriverManager.getConnection(url, username, password);
                 System.out.println("Connected to database successfully!");
             } catch (ClassNotFoundException | SQLException e) {

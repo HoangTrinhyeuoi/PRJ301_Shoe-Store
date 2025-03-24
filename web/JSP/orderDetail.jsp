@@ -196,12 +196,20 @@
                     
                     <div class="d-flex justify-content-between mb-2">
                         <span>Tạm tính:</span>
+<<<<<<< HEAD
                         <span><fmt:formatNumber value="${order.totalAmount - 300}" type="currency" currencySymbol="₫" maxFractionDigits="0" /></span>
+=======
+                        <span><fmt:formatNumber value="${order.totalAmount - 30}" type="currency" currencySymbol="₫" maxFractionDigits="0" /></span>
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
                     </div>
                     
                     <div class="d-flex justify-content-between mb-2">
                         <span>Phí vận chuyển:</span>
+<<<<<<< HEAD
                         <span><fmt:formatNumber value="300" type="currency" currencySymbol="₫" maxFractionDigits="0" /></span>
+=======
+                        <span><fmt:formatNumber value="30" type="currency" currencySymbol="₫" maxFractionDigits="0" /></span>
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
                     </div>
                     
                     <hr>

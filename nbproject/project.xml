@@ -7,6 +7,7 @@
             <minimum-ant-version>1.6.5</minimum-ant-version>
             <web-module-libraries>
                 <library dirs="200">
+<<<<<<< HEAD
                     <file>${file.reference.mssql-jdbc-12.8.1.jre8.jar}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
@@ -20,6 +21,15 @@
                 </library>
                 <library dirs="200">
                     <file>${file.reference.gson-2.8.2.jar}</file>
+=======
+                    <file>${file.reference.jakarta.servlet.jsp.jstl-3.0.1.jar}</file>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.jakarta.servlet.jsp.jstl-api-3.0.2.jar}</file>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.httpclient-4.5.5.jar}</file>
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library dirs="200">
@@ -27,6 +37,7 @@
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library dirs="200">
+<<<<<<< HEAD
                     <file>${file.reference.jakarta.servlet.jsp.jstl-3.0.1.jar}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
@@ -48,6 +59,21 @@
                 </library>
                 <library dirs="200">
                     <file>${file.reference.javase-3.5.1.jar}</file>
+=======
+                    <file>${file.reference.fluent-hc-4.5.5.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.commons-logging-1.2.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.gson-2.8.2.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.mssql-jdbc-12.8.1.jre8.jar}</file>
+>>>>>>> d8588f6ade129e270110de5d78b08c013d418d41
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
             </web-module-libraries>
