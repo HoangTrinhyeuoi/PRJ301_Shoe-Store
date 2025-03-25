@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.banner {
+    height: 300px;
+    background: url('../img/OIP\(3\).jpeg') no-repeat center center/cover;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.card img {
+    height: 250px;
+    object-fit: cover;
+}
