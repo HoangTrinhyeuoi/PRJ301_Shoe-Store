@@ -17,6 +17,6 @@ Các Thành Viên Tham Gia:
 
 Các Chức Năng Nổi Bật:
   + Google Login
-  + Trợ lý AI (Được lấy API từ google và huấn luyện đọc dữ liệu SQL Server)
+  + Trợ lý AI (Được lấy API từ google và AI cơ bản huấn luyện đọc dữ liệu SQL Server)
   + Tích hợp cổng thanh toán VNPay
   + Một số chức năng cơ bản khác về bán hàng, ...
