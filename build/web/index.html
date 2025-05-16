@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker Space - Giày Thể Thao Chính Hãng</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #ff6b6b;
+            --secondary-color: #4ecdc4;
+            --dark-color: #1a1a2e;
+            --light-color: #f7f7f7;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light-color);
+        }
+
+        /* Navigation Bar Styling */
+        .navbar {
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--primary-color) !important;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            margin: 0 0.5rem;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .navbar .form-control {
+            border-radius: 20px;
+            padding-left: 15px;
+        }
+
+        .navbar .btn-outline-light {
+            border-radius: 20px;
+            transition: var(--transition);
+        }
+
+        .navbar .btn-outline-light:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        /* Banner Styling */
+        .banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/adidas_predator.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            position: relative;
+        }
+
+        .banner .container {
+            z-index: 1;
+        }
+
+        .banner h1 {
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 1.5rem;
+        }
+
+        .banner p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .banner .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .banner .btn-primary:hover {
+            background-color: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        /* Products Section */
+        #products h2, .section-title {
+            position: relative;
+            font-weight: 700;
+            color: var(--dark-color);
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+        }
+
+        #products h2:after, .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: var(--transition);
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-img-top {
+            height: 240px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-text {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1.2rem;
+        }
+
+        .card .btn-primary {
+            background-color: var(--dark-color);
+            border-color: var(--dark-color);
+            transition: var(--transition);
+            border-radius: 30px;
+            padding: 0.5rem 1.5rem;
+        }
+
+        .card .btn-primary:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        /* Categories Section */
+        .category-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            height: 200px;
+        }
+
+        .category-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .category-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .category-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+        }
+
+        .category-title {
+            color: white;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        /* Features Section */
+        .features-section {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: 30px 20px;
+            transition: var(--transition);
+            border-radius: 10px;
+        }
+
+        .feature-box:hover {
+            background-color: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Newsletter Section */
+        .newsletter-section {
+            background-color: var(--primary-color);
+            padding: 60px 0;
+            color: white;
+        }
+
+        .newsletter-form .form-control {
+            height: 50px;
+            border-radius: 30px 0 0 30px;
+            border: none;
+            padding-left: 20px;
+        }
+
+        .newsletter-form .btn {
+            border-radius: 0 30px 30px 0;
+            background-color: var(--dark-color);
+            border-color: var(--dark-color);
+            height: 50px;
+            padding: 0 30px;
+            font-weight: 600;
+        }
+
+        /* Brands Section */
+        .brands-section {
+            padding: 60px 0;
+        }
+
+        .brand-item {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            margin-bottom: 30px;
+            opacity: 0.6;
+            transition: var(--transition);
+        }
+
+        .brand-item:hover {
+            opacity: 1;
+        }
+
+        .brand-item img {
+            max-height: 100%;
+            max-width: 100%;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: var(--dark-color);
+            padding: 60px 0 30px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-heading {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            margin-right: 10px;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Special Offers Badge */
+        .badge-offer {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+            z-index: 1;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .banner {
+                height: 60vh;
+            }
+            
+            .banner h1 {
+                font-size: 2.2rem;
+            }
+            
+            .banner p {
+                font-size: 1.1rem;
+            }
+            
+            .card-img-top {
+                height: 200px;
+            }
+            
+            .category-item {
+                height: 150px;
+            }
+        }
+
+        /* Animation for page load */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card, .banner .container, #products h2, .feature-box, .category-item {
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        /* Custom animation delays for staggered effect */
+        #products .card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        #products .card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        #products .card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .feature-box:nth-child(1) {
+            animation-delay: 0.3s;
+        }
+
+        .feature-box:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .feature-box:nth-child(3) {
+            animation-delay: 0.7s;
+        }
+
+        .feature-box:nth-child(4) {
+            animation-delay: 0.9s;
+        }
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Sneaker Space</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto me-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Trang chủ</a></li>
+                <li class="nav-item"><a class="nav-link" href="JSP/products.jsp">Sản Phẩm</a></li>
+                <li class="nav-item"><a class="nav-link" href="JSP/cart.jsp">Giỏ hàng</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Giới thiệu</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
+            </ul>
+            <!-- Thanh tìm kiếm -->
+            <form class="d-flex" action="JSP/search.jsp" method="GET">
+                <input class="form-control me-2" type="search" name="query" placeholder="Tìm kiếm giày..." aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Tìm</button>
+            </form>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="JSP/login.jsp"><i class="bi bi-person"></i> Đăng nhập</a></li>
+                <li class="nav-item"><a class="nav-link" href="JSP/cart.jsp"><i class="bi bi-cart3"></i> <span class="badge bg-danger">3</span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Banner -->
+<header class="banner text-center text-white d-flex align-items-center">
+    <div class="container">
+        <h1 class="display-4">Chào mừng đến với Sneaker Space</h1>
+        <p class="lead">Mua sắm những đôi giày phong cách nhất với giá tốt nhất!</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="#products" class="btn btn-primary btn-lg">Mua ngay</a>
+            <a href="about.html" class="btn btn-outline-light btn-lg">Tìm hiểu thêm</a>
+        </div>
+    </div>
+</header>
+
+<!-- Danh mục sản phẩm -->
+<section class="container my-5">
+    <h2 class="text-center section-title">Danh mục sản phẩm</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="category-item">
+                <img src="img/adidas_ultraboost.jpg" alt="Giày thể thao">
+                <div class="category-overlay">
+                    <h4 class="category-title">Giày Thể Thao</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="category-item">
+                <img src="img/nike_airmax.jpg" alt="Giày chạy bộ">
+                <div class="category-overlay">
+                    <h4 class="category-title">Giày Chạy Bộ</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="category-item">
+                <img src="img/puma_deviate_nitro.jpg" alt="Giày thời trang">
+                <div class="category-overlay">
+                    <h4 class="category-title">Giày Thời Trang</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Danh sách sản phẩm nổi bật -->
+<section class="container my-5" id="products">
+    <h2 class="text-center mb-4">Sản phẩm nổi bật</h2>
+    <div class="row">
+        <!-- Sản phẩm mẫu -->
+        <div class="col-md-3">
+            <div class="card">
+                <span class="badge-offer">-15%</span>
+                <img src="img/nike_airmax.jpg" class="card-img-top" alt="Giày 1">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Nike Air Max</h5>
+                    <p class="card-text">2,500,000 VND</p>
+                    <div class="d-flex justify-content-between">
+                        <a href="JSP/product-detail.jsp?id=1" class="btn btn-primary">Xem chi tiết</a>
+                        <button class="btn btn-outline-dark"><i class="bi bi-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="img/adidas_ultraboost.jpg" class="card-img-top" alt="Giày 2">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Adidas Ultraboost</h5>
+                    <p class="card-text">3,000,000 VND</p>
+                    <div class="d-flex justify-content-between">
+                        <a href="JSP/product-detail.jsp?id=2" class="btn btn-primary">Xem chi tiết</a>
+                        <button class="btn btn-outline-dark"><i class="bi bi-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <span class="badge-offer">Mới</span>
+                <img src="img/puma_deviate_nitro.jpg" class="card-img-top" alt="Giày 3">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Puma Deviate Nitro</h5>
+                    <p class="card-text">2,200,000 VND</p>
+                    <div class="d-flex justify-content-between">
+                        <a href="JSP/product-detail.jsp?id=3" class="btn btn-primary">Xem chi tiết</a>
+                        <button class="btn btn-outline-dark"><i class="bi bi-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="img/nike_pegasus.jpg" class="card-img-top" alt="Giày 4">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Nike Pegasus</h5>
+                    <p class="card-text">1,950,000 VND</p>
+                    <div class="d-flex justify-content-between">
+                        <a href="JSP/product-detail.jsp?id=4" class="btn btn-primary">Xem chi tiết</a>
+                        <button class="btn btn-outline-dark"><i class="bi bi-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <a href="JSP/products.jsp" class="btn btn-outline-dark btn-lg">Xem tất cả sản phẩm</a>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+    <div class="container">
+        <h2 class="text-center section-title">Tại sao chọn Sneaker Space?</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="feature-box">
+                    <i class="bi bi-truck feature-icon"></i>
+                    <h4 class="feature-title">Giao hàng miễn phí</h4>
+                    <p>Đơn hàng trên 1 triệu đồng sẽ được giao hàng miễn phí toàn quốc</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-box">
+                    <i class="bi bi-shield-check feature-icon"></i>
+                    <h4 class="feature-title">Hàng chính hãng 100%</h4>
+                    <p>Cam kết chỉ bán hàng chính hãng với tem nhãn đầy đủ</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-box">
+                    <i class="bi bi-arrow-repeat feature-icon"></i>
+                    <h4 class="feature-title">Đổi trả trong 30 ngày</h4>
+                    <p>Đổi trả sản phẩm miễn phí nếu có lỗi từ nhà sản xuất</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-box">
+                    <i class="bi bi-headset feature-icon"></i>
+                    <h4 class="feature-title">Hỗ trợ 24/7</h4>
+                    <p>Đội ngũ tư vấn viên luôn sẵn sàng hỗ trợ mọi lúc</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h3>Đăng ký nhận tin khuyến mãi</h3>
+                <p>Đăng ký để nhận thông tin về sản phẩm mới và các chương trình khuyến mãi đặc biệt.</p>
+            </div>
+            <div class="col-md-6">
+                <form class="newsletter-form d-flex">
+                    <input type="email" class="form-control" placeholder="Nhập email của bạn">
+                    <button type="submit" class="btn">Đăng ký</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Brands Section -->
+<section class="brands-section">
+    <div class="container">
+        <h2 class="text-center section-title">Thương hiệu nổi bật</h2>
+        <div class="row">
+            <div class="col-md-2 col-6">
+                <div class="brand-item">
+                    <p class="text-center mb-0 fw-bold">Nike</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-6">
+                <div class="brand-item">
+                    <p class="text-center mb-0 fw-bold">Adidas</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-6">
+                <div class="brand-item">
+                    <p class="text-center mb-0 fw-bold">Puma</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-6">
+                <div class="brand-item">
+                    <p class="text-center mb-0 fw-bold">New Balance</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-6">
+                <div class="brand-item">
+                    <p class="text-center mb-0 fw-bold">Reebok</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-6">
+                <div class="brand-item">
+                    <p class="text-center mb-0 fw-bold">Vans</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <h5 class="footer-heading">Sneaker Space</h5>
+                <p>Cung cấp những đôi giày chính hãng chất lượng cao với giá tốt nhất thị trường.</p>
+                <div class="social-links mt-3">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <h5 class="footer-heading">Liên kết nhanh</h5>
+                <a href="index.html" class="footer-link">Trang chủ</a>
+                <a href="JSP/products.jsp" class="footer-link">Sản phẩm</a>
+                <a href="about.html" class="footer-link">Giới thiệu</a>
+                <a href="contact.html" class="footer-link">Liên hệ</a>
+                <a href="blog.html" class="footer-link">Blog</a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <h5 class="footer-heading">Hỗ trợ</h5>
+                <a href="purchase-guide.html" class="footer-link">Hướng dẫn mua hàng</a>
+                <a href="return-policy.html" class="footer-link">Chính sách đổi trả</a>
+                <a href="warranty.html" class="footer-link">Chính sách bảo hành</a>
+                <a href="payment.html" class="footer-link">Phương thức thanh toán</a>
+                <a href="faq.html" class="footer-link">Câu hỏi thường gặp</a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <h5 class="footer-heading">Liên hệ</h5>
+                <p><i class="bi bi-geo-alt"></i> 123 Đường ABC, Quận 1, TP. HCM</p>
+                <p><i class="bi bi-telephone"></i> (028) 1234 5678</p>
+                <p><i class="bi bi-envelope"></i> info@sneakerspace.com</p>
+                <p><i class="bi bi-clock"></i> Thứ 2 - Chủ nhật: 8h - 22h</p>
+            </div>
+        </div>
+        <div class="text-center copyright">
+            <p>&copy; 2025 Sneaker Space. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
